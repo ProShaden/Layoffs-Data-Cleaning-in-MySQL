@@ -98,11 +98,13 @@ SELECT * FROM layoffs_staging2;
 
 # Step 2: Standardizing Data
 🎯 Why Standardize Data?
+
 Before performing any analysis, it's crucial to ensure data consistency. Inconsistent values (such as extra spaces, typos, or different naming conventions) can lead to inaccurate insights. Below are a few examples of how we can clean and standardize the dataset.
 
 1- Removing Extra Spaces
 
 Sometimes, data contains unwanted leading or trailing spaces. We use the TRIM() function to remove them.
+
 - Identifying the Issue
 ```sql
 SELECT company, TRIM(company) 
@@ -120,6 +122,7 @@ SET company = TRIM(company);
 ![Trim - After Updating](https://github.com/user-attachments/assets/d58cf1d8-9214-4f9a-8f94-d80eb162c4ed)
 
 2- Standardizing Industry Names
+
 We found that the Crypto industry is recorded in multiple ways (e.g., Crypto, Crypto Tech, etc.). We want all records to follow the same format: "Crypto".
 
 - Checking the Unique Values
