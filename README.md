@@ -144,7 +144,9 @@ WHERE industry LIKE 'Crypto%';
 ![One Industry](https://github.com/user-attachments/assets/e0ea8f50-df7f-4de6-9a16-60eb68c2dd95)
 
 3- Fixing Location Name Issues
+
 I noticed that Düsseldorf is written inconsistently. I standardize it to a single format.
+
 - Checking the Unique Values
  ```sql
 SELECT DISTINCT location
@@ -164,6 +166,7 @@ WHERE location LIKE 'D__sle%';
 ![Name Isuue- After](https://github.com/user-attachments/assets/db66ee2b-ca6a-4fa2-b27a-d65344d0e2b6)
 
 # Step 3: Deleting Null Values
+
 Before removing NULL values, let's identify them:
  ```sql
 SELECT *  
